@@ -1,3 +1,14 @@
+// back-end
+var compare = function(a, b){
+  if (a.length > b.length) {
+    return true;
+  }else{
+    return false;
+  }
+};
+
+
+
 $(function() {
   $("#fortune-quiz").submit(function(event){
     event.preventDefault();
@@ -17,7 +28,7 @@ $(function() {
     });
 
     // use expression to compare lengths of arrays and branching to show correct fortune
-    if ( arrayB.length > arrayA.length){
+    if (compare(arrayA, arrayB) === true){
       $("#good").show();
     }else {
       $("#bad").show();
